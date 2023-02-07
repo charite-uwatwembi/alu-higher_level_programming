@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Author - Okeke Makuochukwu
+#Author - Okeke Makuochukwu
 
 
 def remove_char_at(str, n):
