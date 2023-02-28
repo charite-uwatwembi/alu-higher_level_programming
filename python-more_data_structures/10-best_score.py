@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-def multiply_by_2(a_dictionary):
-    double_ditc = dict(a_dictionary)
-    for K, V in double_ditc.items():
-        double_ditc[K] = V * 2
-    return double_ditc
+def best_score(a_dictionary):
+    if not a_dictionary:
+        return None
+    max = list(a_dictionary.items())[0][1]
+    for key, value in a_dictionary.items():
+        if value > max:
+            max = value
+    for key, value in a_dictionary.items():
+        if value == max:
+            return key
