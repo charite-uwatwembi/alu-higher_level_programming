@@ -1,15 +1,15 @@
 #!/usr/bin/node
-function Factorial (num) {
-    if (num === 1) {
-      return 1;
-    } else {
-      return (num * Factorial(num - 1));
-    }
-}
-const fact= parseInt(prompt("Enter any argument:"));
-if (isNaN(fact) === true) {
-    console.log(1);
+const num = parseInt(process.argv[2]);
+
+if (isNaN(num)) {
+  console.log(1);
 } else {
-    const result = Factorial(fact);
-    console.log(result);
+  console.log(factorial(num));
+}
+
+function factorial(a) {
+  if (a === 0 || a === 1) {
+    return 1;
+  }
+  return a * factorial(a - 1);
 }
